@@ -20,19 +20,22 @@ def main(page: ft.Page):
             border_color="purple"
         )
     
-    boton_login = ft.ElevatedButton(
+    boton_login = ft.Button(
         "Iniciar sesion",
         width=300,
         color="white",
-        bgcolor="purple"  
+        bgcolor="purple50"  
     )
+    olvido = ft.Text("¿Olvidaste tu contraseña?", size=20, weight="italic",color="purple150")
+
 
     contenedor = ft.Column(
         [
             titulo,
             usuario,
             password,
-            boton_login
+            boton_login,
+            olvido
         ],
         horizontal_alignment=ft.CrossAxisAlignment.CENTER
     )
