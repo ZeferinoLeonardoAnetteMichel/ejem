@@ -7,8 +7,10 @@ def main(page: ft.Page):
     
     titulo = ft.Text("Iniciar Sesión", size=30, weight="bold",color="purple")
     
+    
     usuario = ft.TextField(
         label="Usuario",
+        icon=ft.Icons.PERSON,
         width=300,
         border_color="purple"
         )
@@ -24,10 +26,12 @@ def main(page: ft.Page):
         "Iniciar sesion",
         width=300,
         color="white",
-        bgcolor="purple50"  
+        bgcolor="purple"  
     )
-    olvido = ft.Text("¿Olvidaste tu contraseña?", size=20, weight="italic",color="purple150")
-
+    olvido = ft.TextButton(
+    content="¿Olvidaste tu contraseña?",
+    icon_color=ft.Colors.PURPLE,
+)
 
     contenedor = ft.Column(
         [
@@ -39,6 +43,10 @@ def main(page: ft.Page):
         ],
         horizontal_alignment=ft.CrossAxisAlignment.CENTER
     )
+
+    page.add(contenedor)
+
+ft.app(target=main)
 
     page.add(contenedor)
 
